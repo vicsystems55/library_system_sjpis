@@ -1,6 +1,6 @@
-## Mindigoglobal
+## library Management System
 
-<p> This is a multilevel marketing platform by Pureweb </p>
+<p> This is library management system for SJPIS</p>
 
 
 ## Contributors
