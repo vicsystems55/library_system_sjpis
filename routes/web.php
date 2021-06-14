@@ -22,9 +22,9 @@ Auth::routes();
 
 Route::get('/choose', 'ChooseRoleController@index')->name('choose');
 
-Route::get('/', function() {
-    return redirect('/login');    
-});
+Route::get('/', 'ChooseRoleController@index')->name('choose')->middleware('auth');
+
+
 
 Route::get('/affiliate/{user_code}', 'UserPageController@affiliate_reg')->name('user.affiliate_reg');
 

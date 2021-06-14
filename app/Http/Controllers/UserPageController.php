@@ -7,12 +7,12 @@ use Illuminate\Http\Request;
 use App\User;
 use App\UserWallet;
 use App\UserProfile;
-use App\Order;
+
 use App\Notification;
 use App\MindigoPack;
 use App\MatchingBonus;
 use App\Faq;
-use App\DirectReferral;
+
 use App\BinaryTree;
 
 use App\MultipleAccount;
@@ -49,16 +49,15 @@ class UserPageController extends Controller
 
         $balance = $credit - $debit;
 
-        $direct_referrals = DirectReferral::with('referrees')->where('referrer_id', Auth::user()->id)->get();
 
 
         $notificationz = Notification::where('user_id', $user_id)->latest()->paginate(15);
 
 
 
-        $my_order = Order::where('user_id', $user_id)->first();
+        
 
-        $other_accounts = MultipleAccount::where('owners_id', Auth::user()->id)->get();
+     
 
      
 
@@ -66,8 +65,8 @@ class UserPageController extends Controller
         return view('user.home',[
             'notificationz' => $notificationz,
             'balance' => $balance,
-            'my_order' => $my_order,
-            'direct_referrals' => $direct_referrals
+           
+           
         ])->with($data);
     }
 
