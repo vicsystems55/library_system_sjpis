@@ -8,31 +8,31 @@
         <nav id="sidebar">
             <div class="shadow-bottom"></div>
 
-            <ul class="list-unstyled menu-categories" id="accordionExample">
+            <ul class="list-unstyled menu-categories " id="accordionExample">
                 
                 @if ($page_name != 'alt_menu' && $page_name != 'blank_page' && $page_name != 'boxed' && $page_name != 'breadcrumb' )
 
-                    <li class="menu {{ ($category_name === 'dashboard') ? 'active' : '' }}">
-                        <a href="#dashboard" data-active="{{ ($category_name === 'dashboard') ? 'true' : 'false' }}" data-toggle="collapse" aria-expanded="{{ ($category_name === 'dashboard') ? 'true' : 'false' }}" class="dropdown-toggle">
+                <div class="c pt-2 text-center">
+                    <img style="object-fit: cover;" width="120px;" height="120px;" class="rounded-circle shadow" src="{{asset('avatars')}}/{{Auth::user()->avatar}}" alt="avatar"> <br>
+                    <br>
+                    {{Auth::user()->user_code}} <br>
+
+                    {{Auth::user()->name}}
+                </div>
+               
+                
+
+                    <li class="menu {{ (request()->is('admin')) ? 'active' : '' }} mt-2 pt-2">
+                        <a href="{{route('admin.home')}}" data-active="{{ (request()->is('admin')) ? 'true' : '' }}" aria-expanded="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" class="dropdown-toggle">
                             <div class="">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-target"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
                                 <span>Dashboard</span>
                             </div>
-                            <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                            </div>
                         </a>
-                        <ul class="collapse submenu list-unstyled {{ ($category_name === 'dashboard') ? 'show' : '' }}" id="dashboard" data-parent="#accordionExample">
-                            <li class="{{ ($page_name === 'sales') ? 'active' : '' }}">
-                                <a href="{{route('admin.home')}}"> Home </a>
-                            </li>
-                           
-                        </ul>
                     </li>
 
-
-                    <li class="menu {{ ($category_name === 'fonticons') ? 'active' : '' }}">
-                        <a href="" data-active="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" aria-expanded="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" class="dropdown-toggle">
+                    <li class="menu {{ (request()->is('admin/library')) ? 'active' : '' }}">
+                        <a href="{{route('admin.library')}}" data-active="{{ (request()->is('admin/library')) ? 'true' : '' }}" aria-expanded="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-target"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
                                 <span>Manage Library</span>
@@ -40,8 +40,8 @@
                         </a>
                     </li>
 
-                    <li class="menu {{ ($category_name === 'fonticons') ? 'active' : '' }}">
-                        <a href="" data-active="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" aria-expanded="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" class="dropdown-toggle">
+                    <li class="menu {{ (request()->is('admin/students')) ? 'active' : '' }}">
+                        <a href="{{route('admin.students')}}"  data-active="{{ (request()->is('admin/mindigo_resources')) ? 'true' : '' }}" aria-expanded="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-target"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
                                 <span>Manage Students</span>
@@ -49,12 +49,8 @@
                         </a>
                     </li>
 
-
-
-
-
-                    <li class="menu {{ ($category_name === 'fonticons') ? 'active' : '' }}">
-                        <a href="{{route('admin.payouts')}}" data-active="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" aria-expanded="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" class="dropdown-toggle">
+                    <li class="menu {{ (request()->is('admin/bookings')) ? 'active' : '' }}">
+                        <a href="{{route('admin.bookings')}}"  data-active="{{ (request()->is('admin/mindigo_resources')) ? 'true' : '' }}" aria-expanded="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-target"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
                                 <span>Manage Bookings</span>
@@ -62,8 +58,17 @@
                         </a>
                     </li>
 
-                    <li class="menu {{ ($category_name === 'fonticons') ? 'active' : '' }}">
-                        <a href="{{route('admin.support')}}" data-active="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" aria-expanded="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" class="dropdown-toggle">
+                    <li class="menu {{ (request()->is('admin/notifications')) ? 'active' : '' }}">
+                        <a href="{{route('admin.notifications')}}"  data-active="{{ (request()->is('admin/notifications')) ? 'true' : '' }}" aria-expanded="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" class="dropdown-toggle">
+                            <div class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-target"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                                <span>Notifications</span>
+                            </div>
+                        </a>
+                    </li>
+                    
+                    <li class="menu {{ (request()->is('admin/settings')) ? 'active' : '' }}">
+                        <a href="{{route('admin.settings')}}"  data-active="{{ (request()->is('admin/mindigo_resources')) ? 'true' : '' }}" aria-expanded="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-target"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
                                 <span>Settings</span>
@@ -71,14 +76,29 @@
                         </a>
                     </li>
 
+                    <li class="menu {{ (request()->is('admin/settings')) ? 'active' : '' }}">
+                        <a href="{{route('logout')}}"  data-active="{{ (request()->is('admin/mindigo_resources')) ? 'true' : '' }}" aria-expanded="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" class="dropdown-toggle">
+                            <div class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-target"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                                <span>Logout</span>
+                            </div>
+                        </a>
+                    </li>
+
+
+               
 
 
 
-                    <div class="  layout-spacing">
+                    
+
+                   
+
               
-                    </div> 
 
-      
+                   
+
+                 
                 @else
 
                     

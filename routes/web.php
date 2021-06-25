@@ -34,41 +34,13 @@ Route::group(['middleware' => ['auth', 'user'], 'prefix' => 'user'], function(){
 
     Route::get('/', 'UserPageController@home')->name('user.home');
 
-    Route::get('/my_account', 'UserPageController@my_account')->name('user.my_account');
-
-    Route::get('/genealogy2/{code}', 'UserPageController@genealogy22')->name('user.genealogy2');
-
     Route::get('/my_profile', 'UserPageController@my_profile')->name('user.my_profile');
-
-    Route::get('/my_accounts', 'UserPageController@my_accounts')->name('user.my_accounts');
-
-    Route::get('/genealogy', 'UserPageController@genealogy')->name('user.genealogy');
-
-    Route::get('/mindigo_mart', 'UserPageController@mindigo_mart')->name('user.mindigo_mart');
 
     Route::get('/offline_payment', 'UserPageController@offline_payment')->name('user.offline_payment');
 
     Route::get('/purchase_success', 'UserPageController@purchase_success')->name('user.purchase_success');
 
-    Route::get('/mindigo_resources', 'UserPageController@mindigo_resources')->name('user.mindigo_resources');
-    
     Route::get('/notification', 'UserPageController@notification')->name('user.notification');
-
-    Route::get('/support', 'UserPageController@support')->name('user.support');
-
-    Route::get('/single_support', 'UserPageController@single_support')->name('user.single_support');
-
-
-
-
-    //actions 
-
-    Route::get('/process_order', 'OrderController@process_order')->name('user.purchase_action');
-
-    Route::get('/process_multiple_order', 'OrderController@process_multiple_order')->name('user.process_multiple_order');
-
-   
-
 
     Route::get('/purchase_success', function (){
         # code...
@@ -92,20 +64,21 @@ Route::group(['middleware' => ['auth', 'user'], 'prefix' => 'user'], function(){
 Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function(){
 
     Route::get('/', 'AdminPageController@home')->name('admin.home');
-    Route::get('/members', 'AdminPageController@members')->name('admin.members');
-    Route::get('/single_member', 'AdminPageController@single_member')->name('admin.single_member');
-    Route::get('/payouts', 'AdminPageController@payouts')->name('admin.payouts');
-    Route::get('/genealogy', 'AdminPageController@genealogy')->name('admin.genealogy');
-    Route::get('/genealogy2/{user_code}', 'AdminPageController@genealogy2')->name('admin.genealogy2');
-    Route::get('/orders', 'AdminPageController@orders')->name('admin.orders');
-    Route::get('/single_order', 'AdminPageController@single_order')->name('admin.single_order');
-    Route::get('/support', 'AdminPageController@support')->name('admin.support');
-    Route::get('/single_support', 'AdminPageController@single_support')->name('admin.single_support');
-    Route::get('/audit_trail', 'AdminPageController@audit_trail')->name('admin.audit_trail');
 
-    //initialize nod
+    Route::get('/students', 'AdminPageController@students')->name('admin.students');
 
-    Route::post('/initialize', 'BinaryTreeController@initialize')->name('admin.initialize');
+    Route::get('/library', 'AdminPageController@library')->name('admin.library');
+
+    Route::get('/doc/{doc_id}', 'AdminPageController@doc/{doc_id}')->name('admin.doc/{doc_id}');
+
+    Route::get('/bookings', 'AdminPageController@bookings')->name('admin.bookings');
+
+    Route::get('/settings', 'AdminPageController@students')->name('admin.settings');
+
+    Route::get('/notifications', 'AdminPageController@notifications')->name('admin.notifications');
+
+    Route::get('/single_student/{user_code}', 'AdminPageController@single_member')->name('admin.single_member');
+
 
 
 

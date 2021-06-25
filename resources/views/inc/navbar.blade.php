@@ -7,12 +7,12 @@
 
             <ul class="navbar-item theme-brand flex-row  text-center">
                 <li class="nav-item theme-logo">
-                    <a href="https://mindigo.co.uk">
+                    <a href="">
                         <img src="{{asset('img/90x90.jpg')}}" class="navbar-logo" alt="">
                     </a>
                 </li>
                 <li class="nav-item theme-text">
-                    <a href="/analytics" class="nav-link"> SJPIS </a>
+                    <a href="{{config('app.url')}}" class="nav-link"> SJPIS </a>
                 </li>
             </ul>
 
