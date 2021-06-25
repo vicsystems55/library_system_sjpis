@@ -17,14 +17,16 @@
         <div class="form-form">
             <div class="form-form-wrap">
                 <div class="form-container">
-                    <div class="form-content">
+                    <div class="form-content pt-5">
 
-                        <h1 class="">Create an account now</h1>
-                        <p class="signup-link">Already have an account? <a href="{{route('login')}}">Log in</a></p>
+                        <h1 class="">Join Our Library</h1>
+                        <p class="signup-link">Already have a member? <a href="{{route('login')}}">Log in</a></p>
                         <form method="POST" action="{{ route('register') }}"  class="text-left">
 
                         @csrf
                             <div class="form">
+
+                                
 
                                 <div id="username-field" class="field-wrapper input">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
@@ -39,7 +41,7 @@
                                 </div>
                                 <div id="email-field" class="field-wrapper input">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-at-sign"><circle cx="12" cy="12" r="4"></circle><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path></svg>
-                                    <input id="email" name="email" type="text" value="" placeholder="Email">
+                                    <input id="email" name="email" type="text" value="" placeholder="Email" required>
                                         @error('email')
                                         <span class=" text-danger" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -47,16 +49,29 @@
                                         @enderror
                                 </div>
 
-                                <div id="user_code-field" class="field-wrapper input">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                <div id="phone-field" class="field-wrapper input">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
 
-                                <input id="user_code" name="user_code" type="text" value="{{$user_code??''}}"  placeholder="Referral Code" >
-                                        @error('user_code')
+                                    <input id="phone" name="phone" type="text"  placeholder="Phone" required>
+                                        @error('phone')
                                         <span class=" text-danger" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                         @enderror
                                 </div>
+                                
+                                <div id="class-field" class="field-wrapper input">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+
+                                    <input id="class" name="class" type="text" value=""  placeholder="Enter Class" required>
+                                        @error('class')
+                                        <span class=" text-danger" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                </div>
+
+
                                 <div id="password-field" class="field-wrapper input mb-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-lock"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
                                     <input id="password" name="password" type="password" value="" placeholder="Password">
@@ -71,25 +86,42 @@
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-lock"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
                                     <input id="password" name="password_confirmation" type="password" value="" placeholder="Confirm Password">
                                 </div>
-                                <div class="field-wrapper terms_condition">
+
+                                <div id="class-field" class="field-wrapper input">
+
+                                    <select name="" id="" class="form-control">
+                                        <option value="">--Select Category--</option>
+                                        <option value="">Science</option>
+                                        <option value="">Art</option>
+                                        <option value="">Commercial</option>
+                                        <hr>
+                                        <option value="">Junior Class</option>
+                                    </select>
+                                        @error('class')
+                                        <span class=" text-danger" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                </div>
+                                {{-- <div class="field-wrapper terms_condition">
                                     <div class="n-chk new-checkbox checkbox-outline-primary">
                                         <label class="new-control new-checkbox checkbox-outline-primary">
                                           <input type="checkbox" class="new-control-input" required>
                                           <span class="new-control-indicator"></span><span>I agree to the <a href="javascript:void(0);">  terms and conditions </a></span>
                                         </label>
                                     </div>
-                                </div>
-                                <div class="d-sm-flex justify-content-between">
+                                </div> --}}
+                                <div class=" justify-content-between mt-3">
                                    
                                     <div class="field-wrapper">
-                                        <button type="submit" class="btn btn-warning" value="">Get Started!</button>
+                                        <button type="submit" class="btn btn-warning btn-block btn-lg" value="">Create account</button>
                                     </div>
                                 </div>
 
                             </div>
                         </form>                        
                         <p class="terms-conditions text-warning">© 2021 All Rights Reserved. 
-                        <a href="https://mindigo.co.uk">Mindigoglobal</a>
+                        <a href="https://mindigo.co.uk">SJPIS</a>
                         
                          <!-- <a href="{{config('app.url')}}/pages/privacy_policy"></a> 
                          
@@ -110,7 +142,7 @@
         <div class="form-image">
 
 
-            <div style="background-color: black; background-image: url({{config('app.url')}}img/min.jpeg);" class="l-image ">
+            <div style="background-color: black; background-image: url({{config('app.url')}}img/school.jpeg);" class="l-image ">
             </div>
         </div>
     </div>

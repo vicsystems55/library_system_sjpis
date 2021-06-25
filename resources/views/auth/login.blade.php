@@ -76,13 +76,13 @@
                                 </div>
                                 <div class="d-sm-flex justify-content-end ">
                                     <div class="field-wrapper">
-                                        <button type="submit" class="btn btn-warning mx-auto" >{{ __('Login..') }}</button>
+                                        <button type="submit" class="btn btn-warning mx-auto" >{{ __('Login') }}</button>
                                     </div>
                                     <div class="field-wrapper">
                                        
                                     </div>
                                     <div class="field-wrapper">
-                                        <button type="submit" class="btn btn-outline-warning mx-auto" ><a href="{{route('reg')}}">{{ __('Register') }}</a></button>
+                                        <button type="submit" class="btn btn-outline-warning mx-auto" ><a href="{{route('register')}}">{{ __('Register') }}</a></button>
                                     </div>
                                 </div>
 

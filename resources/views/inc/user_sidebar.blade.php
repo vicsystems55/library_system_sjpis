@@ -47,25 +47,7 @@
                         <a href="{{route('user.my_account')}}" data-active="{{ (request()->is('user/my_account')) ? 'true' : '' }}" aria-expanded="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-target"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-                                <span>My Earnings</span>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li class="menu {{ (request()->is('user/genealogy')) ? 'active' : '' }}">
-                        <a href="{{route('user.genealogy')}}" data-active="{{ (request()->is('user/genealogy')) ? 'true' : '' }}" aria-expanded="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" class="dropdown-toggle">
-                            <div class="">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-target"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-                                <span>Genealogy</span>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li class="menu {{ (request()->is('user/mindigo_mart')) ? 'active' : '' }}">
-                        <a href="{{route('user.mindigo_mart')}}" data-active="{{ (request()->is('user/mindigo_mart')) ? 'true' : '' }}" aria-expanded="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" class="dropdown-toggle">
-                            <div class="">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-target"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-                                <span>Mindigo Packages</span>
+                                <span>School Library</span>
                             </div>
                         </a>
                     </li>
@@ -75,7 +57,7 @@
                         <a href="{{route('user.mindigo_resources')}}" data-active="{{ (request()->is('user/mindigo_resources')) ? 'true' : '' }}" aria-expanded="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-target"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-                                <span>Mindigo Training</span>
+                                <span>My Books</span>
                             </div>
                         </a>
                     </li>
@@ -89,27 +71,7 @@
                         </a>
                     </li>
 
-                    <li class="menu {{ (request()->is('user/support')) ? 'active' : '' }}">
-                        <a href="{{route('user.support')}}" data-active="{{ (request()->is('user/support')) ? 'true' : '' }}" aria-expanded="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" class="dropdown-toggle">
-                            <div class="">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-target"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-                                <span>Support</span>
-                            </div>
-                        </a>
-                    </li>
-
-
-
-
-                    
-
-                   
-
-              
-
-                   
-
-                 
+      
                 @else
 
                     

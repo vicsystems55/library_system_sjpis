@@ -35,7 +35,7 @@
                         <a href="" data-active="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" aria-expanded="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-target"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-                                <span>Members</span>
+                                <span>Manage Library</span>
                             </div>
                         </a>
                     </li>
@@ -44,7 +44,7 @@
                         <a href="" data-active="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" aria-expanded="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-target"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-                                <span>Library</span>
+                                <span>Manage Students</span>
                             </div>
                         </a>
                     </li>
@@ -57,7 +57,7 @@
                         <a href="{{route('admin.payouts')}}" data-active="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" aria-expanded="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-target"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-                                <span>Bookings</span>
+                                <span>Manage Bookings</span>
                             </div>
                         </a>
                     </li>
@@ -66,7 +66,7 @@
                         <a href="{{route('admin.support')}}" data-active="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" aria-expanded="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-target"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-                                <span>Support</span>
+                                <span>Settings</span>
                             </div>
                         </a>
                     </li>

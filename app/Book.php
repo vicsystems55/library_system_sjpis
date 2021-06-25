@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class SapphireStep extends Model
+class Book extends Model
 {
     //
 }

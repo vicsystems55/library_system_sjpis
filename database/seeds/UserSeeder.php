@@ -30,6 +30,10 @@ class UserSeeder extends Seeder
                 'remember_token' => null,
                 'created_at' => now(),
                 'updated_at' => now(),
+
+                'phone' => '08037835670',
+                'class' => 'Admin 001',
+                'category' => 'Admin',
             ],
 
             [
@@ -47,6 +51,10 @@ class UserSeeder extends Seeder
                 'remember_token' => null,
                 'created_at' => now(),
                 'updated_at' => now(),
+
+                'phone' => '08037835670',
+                'class' => 'JSS 1',
+                'category' => 'Junior',
             ],
 
             [
@@ -64,14 +72,13 @@ class UserSeeder extends Seeder
                 'remember_token' => null,
                 'created_at' => now(),
                 'updated_at' => now(),
+
+                'phone' => '08037835670',
+                'class' => 'SS 1',
+                'category' => 'Science',
             ],
 
-
-
-
-
-   
-                
+             
           ]);
     }
 }

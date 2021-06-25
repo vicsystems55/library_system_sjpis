@@ -17,14 +17,14 @@ class ChooseRoleController extends Controller
                 return redirect('/admin');
             }
     
-            elseif (Auth::user()->role =='user') {
+            elseif (Auth::user()->role =='student') {
     
                 // Notification::create([
                 //     'performed_by' => Auth::user()->id,
                 //     'title' => 'User Authentication',
                 //     'log' => 'Just Logged in from ' . request()->ip()
                 // ]);
-                return redirect('/user');
+                return redirect('/student');
             }
     
             elseif (Auth::user()->role =='superadmin') {
