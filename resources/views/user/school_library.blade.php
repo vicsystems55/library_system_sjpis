@@ -70,6 +70,10 @@
                     <div class="card">
                         <div class="card-body">
                             <h6>Title:</h6>
+                            <h6>Description:</h6>
+                        </div>
+                        <div class="card-footer">
+                            <a href="" class="btn btn-primary">View</a>
                         </div>
                     </div>
                 </div>

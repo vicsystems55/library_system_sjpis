@@ -170,9 +170,18 @@ class UserPageController extends Controller
     }
 
 
-    public function notification()
+    public function notifications()
     {
         //
+
+        $notifications = Notification::where('user_id', Auth::user()->id)->latest()->get();
+
+        $notificationz = Notification::where('user_id', Auth::user()->id)->latest()->update([
+            'status' => 'read'
+        ]);
+
+        // dd($notificationz);
+
         $data = [
             'category_name' => 'components',
             'page_name' => 'tabs',
@@ -181,7 +190,9 @@ class UserPageController extends Controller
 
         ];
 
-        return view('user.notification')->with($data);
+        return view('user.notifications',[
+            'notifications' => $notifications
+        ])->with($data);
     }
 
     public function support()

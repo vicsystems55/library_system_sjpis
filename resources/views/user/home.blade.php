@@ -29,8 +29,9 @@
                     <div class="widget-content">
                         <div class="w-content">
                             <div class="w-info">
-                                <h3 class="value">{{Auth::user()->user_code}}</h3>
-                                <p class="">REF ID</p>
+                                <h3 class="value">My Library Card</h3>
+                                <p class="value">{{Auth::user()->user_code}}</p>
+                                <span class="badge badge-primary">REF ID</span>
                                 <hr>
 
                              
@@ -38,7 +39,7 @@
     
                         </div>
                         <div class="pt-5 d-flex justify-content-center">
-                            <a href="" class="btn btn-warning shadow text-center btn-sm"></a>
+                            <a href="" class="btn btn-warning shadow text-center btn-sm">View History</a>
                         </div>
                         <!-- <div class="progress">
                             <div class="progress-bar bg-gradient-secondary" role="progressbar" style="width: 57%" aria-valuenow="57" aria-valuemin="0" aria-valuemax="100"></div>

@@ -2,32 +2,58 @@
 
 @section('content')
 
-            <div  class="layout-px-spacing">                
+            <div  class="container pt-5">                
                     
-                <div class="account-settings-container layout-top-spacing">
+              <h3>My Books</h3>
 
 
-                
+              <div class="row">
+                  <div class="col-md-3 mx-auto">
+                      <div class="card">
+                          <div class="card-body">
+                              <h6>Title:</h6>
+                              <h6>Description:</h6>
+                          </div>
+                          <div class="card-footer">
+                              <a href="" class="btn btn-primary">View</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-3 mx-auto">
+                      <div class="card">
+                          <div class="card-body">
+                            <h6>Title:</h6>
+                            <h6>Description:</h6>
+                          </div>
+                          <div class="card-footer">
+                              <a href="" class="btn btn-primary">View</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-3 mx-auto">
+                      <div class="card">
+                          <div class="card-body">
+                            <h6>Title:</h6>
+                            <h6>Description:</h6>
+                          </div>
+                          <div class="card-footer">
+                              <a href="" class="btn btn-primary">View</a>
+                          </div>
+                      </div>
+                  </div>
 
-                    <div class="account-content">
-                        <div class="scrollspy-example" data-spy="scroll" data-target="#account-settings-scroll" data-offset="-100">
-                            <div class="row">
-
-
-
-                            <example-component avatar="{{config('app.url')}}avatars/{{Auth::user()->avatar??avatar.png}}"  user_name="{{Auth::user()->name}}"  user_id='{{Auth::user()->id}}' user_email='{{Auth::user()->email}}'></example-component>
-
-
-                      
-
-
-
-                            </div>
+                  <div class="col-md-3 mx-auto">
+                    <div class="card">
+                        <div class="card-body">
+                            <h6>Title:</h6>
+                            <h6>Description:</h6>
+                        </div>
+                        <div class="card-footer">
+                            <a href="" class="btn btn-primary">View</a>
                         </div>
                     </div>
-
-                   
                 </div>
+              </div>
 
             </div>
 @endsection
