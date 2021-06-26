@@ -13,17 +13,6 @@
                 @if ($page_name != 'alt_menu' && $page_name != 'blank_page' && $page_name != 'boxed' && $page_name != 'breadcrumb' )
 
 
-                 
-                  
-
-                    <!-- <li class="menu {{ ($category_name === 'fonticons') ? 'active' : '' }}">
-                        <a href="{{route('user.my_account')}}" data-active="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" aria-expanded="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" class="dropdown-toggle">
-                            <div class="">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-target"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-                                <span>My Account</span>
-                            </div>
-                        </a>
-                    </li> -->
 
                     <li class="menu {{ (request()->is('user')) ? 'active' : '' }}">
                         <a href="{{route('user.home')}}" data-active="{{ (request()->is('user')) ? 'true' : '' }}" aria-expanded="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" class="dropdown-toggle">
@@ -43,8 +32,8 @@
                         </a>
                     </li>
 
-                    <li class="menu {{ (request()->is('user/my_account')) ? 'active' : '' }}">
-                        <a href="{{route('user.my_account')}}" data-active="{{ (request()->is('user/my_account')) ? 'true' : '' }}" aria-expanded="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" class="dropdown-toggle">
+                    <li class="menu {{ (request()->is('user/school_library')) ? 'active' : '' }}">
+                        <a href="{{route('user.school_library')}}" data-active="{{ (request()->is('user/school_library')) ? 'true' : '' }}" aria-expanded="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-target"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
                                 <span>School Library</span>
@@ -53,8 +42,8 @@
                     </li>
 
                     
-                    <li class="menu {{ (request()->is('user/mindigo_resources')) ? 'active' : '' }}">
-                        <a href="{{route('user.mindigo_resources')}}" data-active="{{ (request()->is('user/mindigo_resources')) ? 'true' : '' }}" aria-expanded="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" class="dropdown-toggle">
+                    <li class="menu {{ (request()->is('user/my_books')) ? 'active' : '' }}">
+                        <a href="{{route('user.my_books')}}" data-active="{{ (request()->is('user/my_books')) ? 'true' : '' }}" aria-expanded="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-target"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
                                 <span>My Books</span>
@@ -62,8 +51,8 @@
                         </a>
                     </li>
 
-                    <li class="menu {{ (request()->is('user/notification')) ? 'active' : '' }}">
-                        <a href="{{route('user.notification')}}" data-active="{{ (request()->is('user/notification')) ? 'true' : '' }}" aria-expanded="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" class="dropdown-toggle">
+                    <li class="menu {{ (request()->is('user/notifications')) ? 'active' : '' }}">
+                        <a href="{{route('user.notifications')}}" data-active="{{ (request()->is('user/notifications')) ? 'true' : '' }}" aria-expanded="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-target"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
                                 <span>Notifications</span>

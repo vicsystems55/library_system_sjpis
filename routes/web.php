@@ -36,11 +36,16 @@ Route::group(['middleware' => ['auth', 'user'], 'prefix' => 'user'], function(){
 
     Route::get('/my_profile', 'UserPageController@my_profile')->name('user.my_profile');
 
-    Route::get('/offline_payment', 'UserPageController@offline_payment')->name('user.offline_payment');
+    Route::get('/my_books', 'UserPageController@my_books')->name('user.my_books');
 
-    Route::get('/purchase_success', 'UserPageController@purchase_success')->name('user.purchase_success');
+    Route::get('/school_library', 'UserPageController@school_library')->name('user.school_library');
 
-    Route::get('/notification', 'UserPageController@notification')->name('user.notification');
+    Route::get('/doc', 'UserPageController@doc')->name('user.doc');
+
+    Route::get('/my_doc', 'UserPageController@my_doc')->name('user.my_doc');
+
+
+    Route::get('/notifications', 'UserPageController@notifications')->name('user.notifications');
 
     Route::get('/purchase_success', function (){
         # code...
