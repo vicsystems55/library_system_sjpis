@@ -12,7 +12,16 @@
                 
                 @if ($page_name != 'alt_menu' && $page_name != 'blank_page' && $page_name != 'boxed' && $page_name != 'breadcrumb' )
 
+                
+                <div class="c pt-2 text-center">
+                    <img style="object-fit: cover;" width="120px;" height="120px;" class="rounded-circle shadow" src="{{asset('avatars')}}/{{Auth::user()->avatar}}" alt="avatar"> <br>
+                    <br>
+                    {{Auth::user()->user_code}} <br>
 
+                    {{Auth::user()->name}}
+                </div>
+               
+                
 
                     <li class="menu {{ (request()->is('user')) ? 'active' : '' }}">
                         <a href="{{route('user.home')}}" data-active="{{ (request()->is('user')) ? 'true' : '' }}" aria-expanded="{{ ($category_name === 'fonticons') ? 'true' : 'false' }}" class="dropdown-toggle">
