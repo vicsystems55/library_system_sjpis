@@ -79,10 +79,16 @@ class AdminPageController extends Controller
     public function bookings()
     {
         //
+        $data = [
+            'category_name' => 'dashboard',
+            'page_name' => 'analytics',
+            'has_scrollspy' => 0,
+            'scrollspy_offset' => '',
+        ];
 
         return view('admin.bookings',[
-            
-        ]);
+
+            ])->with($data);
     }
 
     public function doc()
@@ -105,6 +111,21 @@ class AdminPageController extends Controller
         ];
 
         return view('admin.students',[
+
+            ])->with($data);
+    }
+
+    public function add_student()
+    {
+        //
+        $data = [
+            'category_name' => 'dashboard',
+            'page_name' => 'analytics',
+            'has_scrollspy' => 0,
+            'scrollspy_offset' => '',
+        ];
+
+        return view('admin.add_student',[
 
             ])->with($data);
     }
