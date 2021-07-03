@@ -51,6 +51,22 @@ class AdminPageController extends Controller
         ])->with($data);
     }
 
+    public function add_book()
+    {
+        //
+
+        $data = [
+            'category_name' => 'dashboard',
+            'page_name' => 'analytics',
+            'has_scrollspy' => 0,
+            'scrollspy_offset' => '',
+        ];
+
+        return view('admin.add_book',[
+
+        ])->with($data);
+    }
+
     public function settings()
     {
         //
@@ -81,10 +97,16 @@ class AdminPageController extends Controller
     public function students()
     {
         //
+        $data = [
+            'category_name' => 'dashboard',
+            'page_name' => 'analytics',
+            'has_scrollspy' => 0,
+            'scrollspy_offset' => '',
+        ];
 
         return view('admin.students',[
-            
-        ]);
+
+            ])->with($data);
     }
 
     public function single_student()

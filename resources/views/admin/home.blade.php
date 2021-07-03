@@ -96,7 +96,7 @@
 
            
 
-            <div class="col-md-4  layout-spacing">
+            <div class="col-md-6  layout-spacing">
                 <div class="widget-four">
                     <div class="widget-heading">
                         <h5 class="">Statistics</h5>
@@ -109,7 +109,7 @@
                                 </div>
                                 <div class="w-browser-details">
                                     <div class="w-browser-info">
-                                        <h6>Mindigo Consumer</h6>
+                                        <h6>Books Borrowed</h6>
                                         <p class="browser-count">65%</p>
                                     </div>
                                     <div class="w-browser-stats">
@@ -127,7 +127,7 @@
                                 <div class="w-browser-details">
                                     
                                     <div class="w-browser-info">
-                                        <h6>Mindigo Partner</h6>
+                                        <h6>Total Books</h6>
                                         <p class="browser-count">25%</p>
                                     </div>
 
@@ -148,7 +148,7 @@
                                 <div class="w-browser-details">
                                     
                                     <div class="w-browser-info">
-                                        <h6>Mindigo Master</h6>
+                                        <h6>Total Students</h6>
                                         <p class="browser-count">15%</p>
                                     </div>
 
@@ -163,27 +163,6 @@
                             </div>
 
 
-                            <div class="browser-list">
-                                <div class="w-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-                                </div>
-                                <div class="w-browser-details">
-                                    
-                                    <div class="w-browser-info">
-                                        <h6>Mindigo Titan</h6>
-                                        <p class="browser-count">15%</p>
-                                    </div>
-
-                                    <div class="w-browser-stats">
-                                        <div class="progress">
-                                            <div class="progress-bar bg-gradient-warning" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            
                         </div>
 
                     </div>
@@ -192,48 +171,8 @@
 
            
 
-            
 
-            
-
-            <div class="col-md-4  layout-spacing">
-                <div class="widget widget-five">
-                    <div class="widget-content">
-
-                        <div class="header">
-                            <div class="header-body">
-                                <h6>Pending Tasks</h6>
-                                <p class="meta-date">Nov 2019</p>
-                            </div>
-                            <div class="task-action">
-                                <div class="dropdown  custom-dropdown">
-                                    <a class="dropdown-toggle" href="#" role="button" id="pendingTask" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
-                                    </a>
-
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="pendingTask">
-                                        <a class="dropdown-item" href="javascript:void(0);">Add</a>
-                                        <a class="dropdown-item" href="javascript:void(0);">View</a>
-                                        <a class="dropdown-item" href="javascript:void(0);">Update</a>
-                                        <a class="dropdown-item" href="javascript:void(0);">Clear All</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="w-content">
-                            <div class="">                                            
-                                <p class="task-left">8</p>
-                                <p class="task-completed"><span>12 Done</span></p>
-                                <p class="task-hight-priority"><span>3 Task</span> with High priotity</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="col-md-4  layout-spacing">
+            <div class="col-md-6  layout-spacing">
                 <div class="widget widget-activity-three">
 
                     <div class="widget-heading">

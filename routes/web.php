@@ -74,6 +74,8 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function(
 
     Route::get('/library', 'AdminPageController@library')->name('admin.library');
 
+    Route::get('/add_book', 'AdminPageController@add_book')->name('admin.add_book');
+
     Route::get('/doc/{doc_id}', 'AdminPageController@doc/{doc_id}')->name('admin.doc/{doc_id}');
 
     Route::get('/bookings', 'AdminPageController@bookings')->name('admin.bookings');
