@@ -61,7 +61,7 @@
                             <th>Status</th>
                         </tr>
 
-                        {{-- <tr>
+                        <tr>
                             <td>1</td>
                             <td>Pirates Of The Carribean</td>
                             <td>2 Jul, 2020</td>
@@ -69,10 +69,10 @@
                             <td>
                                 <span class="badge badge-primary">in session</span>
                             </td>
-                        </tr> --}}
+                        </tr>
                         
 
-                        <h6 class="text-center p-5">No books borowed for this student...</h6>
+                        {{-- <h6 class="text-center p-5">No books borowed for this student...</h6> --}}
                     </table>
 
                   </div>

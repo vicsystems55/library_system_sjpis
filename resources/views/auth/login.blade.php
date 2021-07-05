@@ -81,9 +81,9 @@
                                     <div class="field-wrapper">
                                        
                                     </div>
-                                    <div class="field-wrapper">
+                                    {{-- <div class="field-wrapper">
                                         <button type="submit" class="btn btn-outline-warning mx-auto" ><a href="{{route('register')}}">{{ __('Register') }}</a></button>
-                                    </div>
+                                    </div> --}}
                                 </div>
 
                                 <div class="division">
