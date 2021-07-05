@@ -14,6 +14,23 @@
 
                         <h3>Add a book</h3>
 
+                        @if ($errors->any())
+                        @foreach ($errors->all() as $error)
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                {{$error}}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        @endforeach
+                    @endif
+
+                    @if(Session::has('book_msg'))
+                    <p class="alert alert-info">{{ Session::get('book_msg') }}</p>
+                    <p class="alert alert-info text-center"><a class="btn btn-primary" href="{{route('admin.students')}}">view records</a></p>
+                    
+                    @endif
+
                         <form action="" method="post">
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="Title" name="title">
@@ -47,6 +64,11 @@
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="Recommendation" name="recommendation">
                             </div>
+
+                            <div class="custom-file mb-5">
+                                <input type="file" name="book_cover" class="custom-file-input" id="customFile">
+                                <label class="custom-file-label" for="customFile">Book cover</label>
+                              </div>
 
                             <div class="form-group">
                                 <button class="btn btn-primary btn-block">Submit</button>

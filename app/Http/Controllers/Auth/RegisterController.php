@@ -55,11 +55,10 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'class' => ['required', 'string', 'max:255'],
-            'category' => ['required', 'string', 'max:255'],
-            'phone' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            // 'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'admin_no' => ['required', 'string', 'max:255', 'unique:users'],
             // 'user_code' => ['exists:users,user_code'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            // 'password' => ['required', 'string', 'min:8'],
         ]);
     }
 
@@ -71,16 +70,21 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $regCode = "SJPIS" .rand(1110,9999);
+        
+
+        $username = str_replace(' ', '', $data['name']);
+
+        $username = mb_strimwidth($username, 0, 10, rand(111,900));
+
+        $email = $username.'@sjpis.sch';
+
+        $password = strtoupper($data['admin_no']);
 
         $user = User::create([
             'name' => $data['name'],
-            'email' => $data['email'],
-            'phone' => $data['phone'],
+            'email' => $email,
             'class' => $data['class'],
-            'category' => $data['category'],
-            'user_code' => $regCode,
-            'password' => Hash::make($data['password']),
+            'password' => Hash::make($password),
         ]);
 
 

@@ -86,7 +86,7 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function(
 
     Route::get('/notifications', 'AdminPageController@notifications')->name('admin.notifications');
 
-    Route::get('/single_student/{user_code}', 'AdminPageController@single_member')->name('admin.single_member');
+    Route::get('/single_student/{admin_no}', 'AdminPageController@single_student')->name('admin.single_student');
 
 
 
@@ -1450,6 +1450,9 @@ Route::get('/check_legs/{id}', 'BinaryTreeController@check_legs')->name('check_l
 Route::post('/add_node', 'BinaryTreeController@add_node')->name('add_node');
 
 Route::get('/getChildren/{id}', 'BinaryTreeController@getChildren')->name('getChildren');
+
+
+Route::post('/register_student', 'AddStudentController@register')->name('register_student');
 
 
 

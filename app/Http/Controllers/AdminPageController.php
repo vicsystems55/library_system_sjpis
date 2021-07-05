@@ -110,8 +110,12 @@ class AdminPageController extends Controller
             'scrollspy_offset' => '',
         ];
 
-        return view('admin.students',[
+        $students_data = User::where('role', 'user')->latest()->paginate(20);
 
+       
+
+        return view('admin.students',[
+            'students_data' => $students_data
             ])->with($data);
     }
 
@@ -130,13 +134,21 @@ class AdminPageController extends Controller
             ])->with($data);
     }
 
-    public function single_student()
+    public function single_student($admin_no)
     {
         //
+        $data = [
+            'category_name' => 'dashboard',
+            'page_name' => 'analytics',
+            'has_scrollspy' => 0,
+            'scrollspy_offset' => '',
+        ];
+
+        $student_data = User::where('admin_no', $admin_no)->first();
 
         return view('admin.single_student',[
-            
-        ]);
+            'student' => $student_data
+        ])->with($data);
     }
 
     public function notifications()

@@ -18,9 +18,11 @@ class CreateBooksTable extends Migration
             $table->string('title');
             $table->string('author');
             $table->string('description');
+            $table->string('recommendation');
+            $table->string('book_cover');
             $table->string('ISBN')->default('00-00-00');
             $table->string('category');
-            $table->string('status');
+            $table->string('status')->default('active');
             $table->timestamps();
         });
     }

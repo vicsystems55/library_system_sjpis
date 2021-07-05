@@ -26,7 +26,7 @@ class UserSeeder extends Seeder
                 'email_verified_at' => now(),
                 'role' => 'admin',
                
-                'user_code' => 'SJPIS0001',
+                'admin_no' => 'SJPIS0001',
                 'remember_token' => null,
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -47,7 +47,7 @@ class UserSeeder extends Seeder
                 'email_verified_at' => now(),
                 'role' => 'user',
                
-                'user_code' => 'SJPIS0002',
+                'admin_no' => 'SJPIS0002',
                 'remember_token' => null,
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -68,7 +68,7 @@ class UserSeeder extends Seeder
                 'email_verified_at' => now(),
                 'role' => 'user',
                
-                'user_code' => 'SJPIS0003',
+                'admin_no' => 'SJPIS0003',
                 'remember_token' => null,
                 'created_at' => now(),
                 'updated_at' => now(),
