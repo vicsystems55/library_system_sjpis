@@ -40,7 +40,7 @@
                 @forelse($books as $book)
 
                     <div class="col-md-3 ">
-                        <div class="card" style="">
+                        <div class="card shadow" style="height: 450px;">
                             
                             <img id="previewImg" style="height: 230px; object-fit: cover;" src="{{config('app.url')}}book_covers/{{$book->book_cover}}"  >
 
