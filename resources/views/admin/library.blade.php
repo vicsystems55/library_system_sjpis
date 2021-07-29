@@ -35,52 +35,40 @@
                   </div>
               </div>
 
-              <div class="row">
-                  <div class="col-md-3 mx-auto">
-                      <div class="card">
-                          <div class="card-body">
-                              <h6>Title:</h6>
-                              <h6>Description:</h6>
-                          </div>
-                          <div class="card-footer">
-                              <a href="" class="btn btn-primary">View</a>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-md-3 mx-auto">
-                      <div class="card">
-                          <div class="card-body">
-                            <h6>Title:</h6>
-                            <h6>Description:</h6>
-                          </div>
-                          <div class="card-footer">
-                              <a href="" class="btn btn-primary">View</a>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-md-3 mx-auto">
-                      <div class="card">
-                          <div class="card-body">
-                            <h6>Title:</h6>
-                            <h6>Description:</h6>
-                          </div>
-                          <div class="card-footer">
-                              <a href="" class="btn btn-primary">View</a>
-                          </div>
-                      </div>
-                  </div>
+              <div class="row row-eq-height">
 
-                  <div class="col-md-3 mx-auto">
-                    <div class="card">
-                        <div class="card-body">
-                            <h6>Title:</h6>
-                            <h6>Description:</h6>
-                        </div>
-                        <div class="card-footer">
-                            <a href="" class="btn btn-primary">View</a>
-                        </div>
+                @forelse($books as $book)
+
+                    <div class="col-md-3 ">
+                        <div class="card" style="">
+                            
+                            <img id="previewImg" style="height: 230px; object-fit: cover;" src="{{config('app.url')}}book_covers/{{$book->book_cover}}"  >
+
+                            <div class="card-body">
+                              <h5 class="card-title">{{$book->title}}</h5>
+                              <p class="card-text">{{{$book->description}}}</p>
+                              
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-primary btn-block">More</a>
+                            </div>
+                          </div>
                     </div>
+
+
+                @empty
+
+               <div class="container p-5">
+                <h4 class="text-center">No books yet..</h4>
+                <div class="p-2 text-center">
+                    <a href="{{route('admin.add_book')}}" class="btn btn-primary btn-lg">Add Book</a>
                 </div>
+               </div>
+
+
+                @endforelse
+
+                 
               </div>
 
             </div>

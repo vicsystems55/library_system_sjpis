@@ -13,13 +13,19 @@ class BookController extends Controller
     public function add_book(Request $request)
     {
 
+
+       
+
         $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'class' => ['required', 'string', 'max:255'],
+            'title' => ['required', 'string', 'max:255'],
+            'description' => ['required', 'string', 'max:255'],
+            'category' => ['required', 'string', 'max:255'],
+            // 'class' => ['required', 'string', 'max:255'],
             // 'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'admin_no' => ['required', 'string', 'max:255', 'unique:users'],
+            // 'admin_no' => ['required', 'string', 'max:255', 'unique:users'],
             // 'user_code' => ['exists:users,user_code'],
             // 'password' => ['required', 'string', 'min:8'],
+            //  'book_cover' => ['required','image','mimes:jpg,png,jpeg,gif,svg','max:2048'],
             
         ]);
 
@@ -34,9 +40,10 @@ class BookController extends Controller
             'author' => $request->author,
             'description' => $request->description,
             'recommendation' => $request->recommendation,
-            'book_cover' => $path,
+            'book_cover' => $new_name,
             'ISBN' => $request->ISBN,
-            'category' => $request->category
+            'category' => $request->category,
+            'type' => $request->type
         ]);
 
         return back()->with('book_msg', 'Book successfully added');

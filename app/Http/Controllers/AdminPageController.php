@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\User;
 
+use App\Book;
+
 use Auth;
 
 use App\BinaryTree;
@@ -46,7 +48,11 @@ class AdminPageController extends Controller
             'scrollspy_offset' => '',
         ];
 
+        $books = Book::where('status', 'active')->latest()->get();
+
         return view('admin.library',[
+
+            'books' => $books
 
         ])->with($data);
     }
